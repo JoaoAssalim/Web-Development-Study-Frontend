@@ -1,11 +1,18 @@
 import './App.css';
+import React from 'react';
 import Login from './Components/Login/Login';
+import ListCarrers from './Components/Carrers/ListCarrers';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <Login />
-    </div>
+
+    <Router>
+      <Routes>
+        <Route path='/' element={<Login/>} />
+        <Route path='/list-carrers/' element={<ListCarrers/>} />
+      </Routes>
+    </Router>
   );
 }
 
